@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+    function addSeven(n){
+        return n+7;
+    }
+    function multiply(a, b){
+        return a*b;
+    }
+    function capitalize(str){
+        str = str[0].toUpperCase() + str.slice(1).toLowerCase()
+
+        return str;
+    }
+    function lastLetter(str){
+        let a = str.length
+        return str[a-1];
+    }
+    console.log(addSeven(7));
+    console.log(multiply(8, 2));
+    console.log(capitalize('TEST ABC'));
+    console.log(lastLetter('abcd'))
+  </script>
+</body>
+</html>
