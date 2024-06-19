@@ -4,10 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./manipulate.js" defer></script>
 </head>
 <body>
-    <h1>THE TITLE OF YOUR WEBPAGE</h1>
-    <div id="container"></div>
+    <button id="btn">Click Me</button>
+    <button id="btn2">Click Me Too</button>
+    <button id="btn3">CLICK ME BABY</button> 
+    <button id="btn4">The "e" button (console.log)</button>
+    <button id="btn5">The second "e" button (console.log)</button>
+    <button id="btn6">The Sonic "e" button</button>
 </body>
+<script>
+    const btn = document.querySelector("#btn");
+    btn.onclick = () => alert("Hello World");
+
+    const btn2 = document.querySelector("#btn2");
+    btn2.addEventListener("click", () => {
+        alert("Hello.");
+    });
+
+    function alertFunction() {
+        alert("YAY! YOU DID IT!");
+    }
+
+    const btn3 = document.querySelector("#btn3");
+    btn3.addEventListener("click", alertFunction);
+
+    const btn4 = document.querySelector("#btn4");
+    btn4.addEventListener("click", function (e) {
+        console.log(e);
+    });
+
+    const btn5 = document.querySelector("#btn5");
+    btn5.addEventListener("click", function (e) {
+        console.log(e.target);
+    });
+
+    const btn6 = document.querySelector("#btn6");
+    btn6.addEventListener("click", function (e) {
+        e.target.style.background = "blue";
+    });
+
+</script>
 </html>
